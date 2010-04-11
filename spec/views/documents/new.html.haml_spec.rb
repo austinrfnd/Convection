@@ -5,6 +5,7 @@ describe "/documents/new.html.haml" do
   
   before(:each) do
     assigns[:document] = Factory.build(:document)
+    assigns[:uuid] = '12345'
   end
 
   it "should render new form" do
