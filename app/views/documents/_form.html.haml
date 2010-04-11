@@ -1,6 +1,8 @@
-- form_for(@document, :html => { :multipart => true } ) do |f|    
+- form_for(@document, :url => document_path(@document, "X-Progress-ID" => @uuid):html => { :multipart => true } ) do |f|
+	- if defined?(@uuid)
+		= f.hidden_field @uuid
   = error_messages_for :document
-  = labeled_input f, :name    
+  = labeled_input f, :name
   .labeled_input  
     = f.label :description
     = f.text_area :description

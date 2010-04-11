@@ -1,6 +1,14 @@
+-content_for :header
+	= javascript_include_tag 'upload'
+
 - set_headline "Upload a File"
 
 = link_to 'Back to List', documents_path
 
 = render :partial => "form"  
 
+
+#progress{:style => 'display: none'}
+	File upload in proress
+	#bar{:style => 'width: 0%'}
+		0%
