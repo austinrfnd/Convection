@@ -47,8 +47,9 @@ class DocumentsController < ApplicationController
   # GET /documents/new.xml
   def new
     @document = Document.new
-    @uuid = (0..29).to_a.map {|x| rand(10)}
-
+    @uuid = ''
+    (0..29).to_a.map{|x| rand(10)}.each{|i| @uuid = "#{@uuid}#{i}"}
+    logger.info @uuid.inspect
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @document }
