@@ -6,4 +6,5 @@
 		= f.label :description
 		= f.text_area :description
 	= labeled_input f, :data, :input => f.file_field(:data) 
-	= labeled_input f, nil, :input => f.submit, :nolabel => true, :class => 'submit'
+	= f.submit 'upload document', :class => 'submit'
+	/ = labeled_input f, nil, :input => f.submit, :nolabel => true, :class => 'submit'
