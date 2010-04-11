@@ -1,4 +1,4 @@
-- form_for(@document, :url => documents_path(@document, "X-Progress-ID" =>  @uuid), :method => :post, :html => { :multipart => true } ) do |f|
+- form_for(@document, :url => documents_path(@document, "X-Progress-ID" =>  @uuid), :html => { :multipart => true, :method => :post } ) do |f|
 	= hidden_field_tag 'X-Progress-ID', @uuid 
 	= error_messages_for :document
 	= labeled_input f, :name
