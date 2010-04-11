@@ -13,7 +13,6 @@ Event.observe(window, 'load',
 
 Event.addBehavior({
   "input.submit:click" : function () {
-		alert("HERE????");
     $('progress').show();
 
     //add iframe and set form target to this iframe
