@@ -9,5 +9,6 @@
 	File upload in proress
 	%div#bar{:style => 'width: 0%'}
 		0%
-
-= render :partial => "form"
+		
+- form_for(@document, :url => documents_path(@document, "X-Progress-ID" =>  @uuid), :html => { :multipart => true} ) do |f|
+	= render :partial => "form", :locals => {:f => f}
